@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Water Rights &amp; Use | CSKT Water Compact Implementation</title>
+<meta name="description" content="Find CSKT water rights and use information, forms, documents, maps, and water resource guidance.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/inner.css">
+<script src="js/main.js"></script>
+</head>
+<body>
+<!-- Shared icon sprite (decorative; referenced with <use>) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1.6"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.4 3.5"/><path d="M4.2 14.5a5 5 0 0 0 6.9 6"/><path d="M13.8 17.5a5 5 0 0 0-6.9-6"/></symbol>
+    <symbol id="i-drop" viewBox="0 0 24 24"><path d="M12 2.7s6 6.3 6 11a6 6 0 0 1-12 0c0-4.7 6-11 6-11z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2.1 6.4-6.4 2.1 2.1-6.4z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6.5A2 2 0 0 1 5 4.5h4l2 2.5h8a2 2 0 0 1 2 2V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8M10 9h2"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2z"/><path d="M9 4v14M15 6v14"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 6-6h2a6 6 0 0 1 6 6v1"/><path d="M16 4.1a4 4 0 0 1 0 7.8M22 21v-1a6 6 0 0 0-4-5.6"/></symbol>
+    <symbol id="i-waves" viewBox="0 0 24 24"><path d="M2 7c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M2 12c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/><path d="M2 17c1.5 1 3 1 4.5 0s3-1 4.5 0 3 1 4.5 0 3-1 4.5 0"/></symbol>
+    <symbol id="i-fish" viewBox="0 0 24 24"><path d="M6.5 12c1-3.5 4.9-6 8.5-6 3.6 0 6.1 2.5 7 6-.9 3.5-3.4 6-7 6s-7.5-2.5-8.5-6z"/><path d="M3 9l3.5 3L3 15"/><circle cx="16.5" cy="11" r=".8"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.4 19.4 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-l" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  </defs>
+</svg>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <span>Confederated Salish and Kootenai Tribes · Division of Engineering &amp; Water Resources</span>
+    <div class="topbar-links"><a href="index.html#notices">Public Notices</a><a href="index.html#contact">Contact DEWR</a></div>
+  </div>
+</div>
+
+<header class="site" id="site-header">
+  <div class="wrap header-bar">
+    <a class="brand" href="index.html" aria-label="CSKT Water Compact Implementation, home">
+      <img src="assets/images/logo.png" alt="CSKT Water Compact Implementation" width="1915" height="339">
+    </a>
+
+    <nav class="nav-links" id="primary-nav" aria-label="Primary">
+      <a href="index.html#story">About</a>
+      <a href="index.html#stories">Projects</a>
+      <a href="index.html#impact">Programs</a>
+      <a href="water-rights.html" aria-current="page">Rights</a>
+      <a href="index.html#resources">Resources</a>
+      <a href="index.html#notices">News</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="header-tools">
+      <span class="icon-static" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-search"/></svg></span>
+      <span class="icon-static" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg></span>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" class="inner-main">
+  <section class="inner-hero" aria-labelledby="page-title">
+    <div class="inner-hero-image" aria-hidden="true"><img src="https://images.unsplash.com/photo-1437482078695-73f5ca6c96e2?auto=format&fit=crop&w=2200&q=85" alt="" width="2200" height="1200" fetchpriority="high"></div>
+    <div class="wrap inner-hero-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Water Rights &amp; Use</span>
+      </nav>
+      <h1 id="page-title">Water Rights <span>&amp; Use</span></h1>
+      <p class="inner-lead">Find information about Tribal water rights, water use, available resources, and ways to connect with the CSKT Division of Engineering &amp; Water Resources.</p>
+      <div class="inner-hero-actions">
+        <a class="btn btn-gold" href="#water-rights-info">Explore Water Rights <svg class="ico arr" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+        <a class="btn btn-outline" href="#water-resources">Browse Resources</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Water Stewardship</span><span>Tribal Water Rights</span><span>Engineering</span><span>Restoration</span><span>Community Resources</span><span>Future Generations</span>
+      <span>Water Stewardship</span><span>Tribal Water Rights</span><span>Engineering</span><span>Restoration</span><span>Community Resources</span><span>Future Generations</span>
+    </div>
+  </div>
+
+  <section class="inner-intro sec" id="water-rights-info">
+    <div class="wrap inner-intro-grid">
+      <div class="inner-intro-photo reveal">
+        <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1200&q=85"
+             alt="Open water surface reflecting the changing light" width="1200" height="900" loading="lazy">
+      </div>
+      <div class="inner-intro-copy reveal" style="--d:.1s">
+        <p class="eyebrow">Understand Your Resources</p>
+        <h2>Water information, clearly organized.</h2>
+        <p class="lead">Water rights questions can depend on the specific right, location, and circumstances. Use the pathways below to find published CSKT information and supporting materials. For legal interpretations, eligibility, deadlines, or steps that apply to your situation, rely on official CSKT guidance rather than this overview.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-resources sec" id="water-resources">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Start Here</p>
+        <h2>Find the information you need</h2>
+        <p class="lead">Choose the pathway that best matches your task. Review the source and date of each document or map, and contact DEWR if you cannot find the information you need.</p>
+      </div>
+      <div class="inner-card-grid">
+        <article class="inner-card">
+          <span class="inner-card-icon"><svg class="ico" aria-hidden="true"><use href="#i-drop"/></svg></span>
+          <h3>Water Rights Information</h3>
+          <p>Start with official background information on Tribal water rights and Compact implementation. Confirm any specific requirements or interpretations with CSKT.</p>
+          <a href="#water-rights-info">Explore information <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+        </article>
+        <article class="inner-card">
+          <span class="inner-card-icon"><svg class="ico" aria-hidden="true"><use href="#i-folder"/></svg></span>
+          <h3>Forms &amp; Documents</h3>
+          <p>Locate available forms, reports, technical documents, and related materials. Use the instructions included with each document and verify that you have the current version.</p>
+          <a href="index.html#resources">Browse resources <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+        </article>
+        <article class="inner-card">
+          <span class="inner-card-icon"><svg class="ico" aria-hidden="true"><use href="#i-map"/></svg></span>
+          <h3>Maps &amp; GIS</h3>
+          <p>Find available maps and GIS resources for geographic context and project areas. Check the map’s source and date; contact DEWR for help identifying a relevant dataset.</p>
+          <a href="index.html#resources">View map resources <svg class="ico" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-feature">
+    <div class="wrap inner-feature-grid">
+      <figure class="inner-feature-photo reveal"><img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=85" alt="Healthy forest landscape supporting watershed protection" width="1400" height="1000" loading="lazy" decoding="async"></figure>
+      <div class="inner-feature-copy reveal" style="--d:.1s">
+        <p class="eyebrow">Compact Implementation</p>
+        <h2>Protecting water for future generations</h2>
+        <p>The CSKT-Montana Water Compact is a key part of the Tribes’ water resource implementation work. This page provides a starting point, not a complete explanation of Compact terms or procedures. Consult official CSKT Compact materials for authoritative details, current requirements, and related documentation.</p>
+        <a class="btn btn-gold" href="index.html#story">About the Initiative <svg class="ico arr" aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="inner-faq sec" id="faq">
+    <div class="wrap inner-faq-grid">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Need Help?</p>
+        <h2>Frequently asked questions</h2>
+        <p class="lead">This page is intended to help you find resources. It does not determine individual rights or provide legal advice. Confirm situation-specific questions with official CSKT sources.</p>
+      </div>
+      <div class="reveal" style="--d:.1s">
+        <details class="qa"><summary>Where should I start with water rights questions? <span class="plus" aria-hidden="true">+</span></summary><p>Start with the information and documents available on this page. If you need help identifying the right resource, contact the Division of Engineering &amp; Water Resources.</p></details>
+        <details class="qa"><summary>Where can I find forms and supporting documents? <span class="plus" aria-hidden="true">+</span></summary><p>Visit the Forms &amp; Documents and Resources areas of the homepage to browse available materials.</p></details>
+        <details class="qa"><summary>Where can I find maps and GIS resources? <span class="plus" aria-hidden="true">+</span></summary><p>Use the Maps &amp; GIS resource pathway to find geographic information made available by the department.</p></details>
+        <details class="qa"><summary>Who can I contact for help? <span class="plus" aria-hidden="true">+</span></summary><p>Contact the CSKT Division of Engineering &amp; Water Resources using the details provided in the site footer.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="foot-logo" href="index.html" aria-label="CSKT Water Compact Implementation, back to top">
+          <img src="assets/images/logo.png" alt="CSKT Water Compact Implementation" width="1915" height="339">
+        </a>
+        <p>The CSKT Division of Engineering &amp; Water Resources supports water resource stewardship, engineering, restoration, infrastructure, planning, and public outreach.</p>
+      </div>
+
+      <nav class="foot-col" aria-labelledby="f-explore">
+        <h2 id="f-explore">Explore</h2>
+        <ul>
+          <li><a href="index.html#water-rights">Water Rights</a></li>
+          <li><a href="index.html#impact">Programs</a></li>
+          <li><a href="index.html#stories">Projects</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+        </ul>
+      </nav>
+
+      <nav class="foot-col" aria-labelledby="f-resources">
+        <h2 id="f-resources">Resources</h2>
+        <ul>
+          <li><a href="index.html#resources">Forms &amp; Documents</a></li>
+          <li><a href="index.html#resources">Maps &amp; GIS</a></li>
+          <li><a href="index.html#notices">News &amp; Notices</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="foot-col">
+        <h2 id="f-contact">Contact</h2>
+        <ul class="foot-contact" aria-labelledby="f-contact">
+          <li><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg><span>Flathead Indian Reservation<br>Northwestern Montana</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-building"/></svg><span>Confederated Salish and Kootenai Tribes</span></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+14063041079">406-304-1079</a></li>
+          <li><svg class="ico" aria-hidden="true"><use href="#i-ext"/></svg><a href="https://cskt.org/" target="_blank" rel="noopener">Official CSKT website<span class="vh"> (opens in a new window)</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>© 2026 Confederated Salish and Kootenai Tribes. All rights reserved.</p>
+      <ul>
+        <li><a href="https://cskt.org/" target="_blank" rel="noopener">Privacy<span class="vh"> (opens in a new window)</span></a></li>
+        <li><a href="https://cskt.org/" target="_blank" rel="noopener">Terms<span class="vh"> (opens in a new window)</span></a></li>
+        <li><a href="https://cskt.org/" target="_blank" rel="noopener">Accessibility<span class="vh"> (opens in a new window)</span></a></li>
+      </ul>
+    </div>
+    <div class="foot-base">
+      <p class="credits">CSKT Water Compact Implementation · Division of Engineering &amp; Water Resources · Natural Resources Department</p>
+      <img class="footer-art" src="assets/images/footer-art.svg" alt="" aria-hidden="true" width="200" height="40">
+    </div>
+    <p class="foot-word" aria-hidden="true">CSKT WATER</p>
+  </div>
+</footer>
+
+<!-- Floating accessibility icon: decorative only, not interactive -->
+<span class="a11y-float" aria-hidden="true"><svg class="ico" aria-hidden="true"><use href="#i-access"/></svg></span>
+</body>
+</html>
